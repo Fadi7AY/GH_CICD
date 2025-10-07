@@ -18,7 +18,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }} 
 
     - name: build image
-      run: docker build -t vars.DOCKERHUB_USERNAME/lab11:latest .
+      run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/lab11:latest .
 
     - name: push image to docker hub
       run: docker push ${{ vars.DOCKERHUB_USERNAME }}/lab11:latest
